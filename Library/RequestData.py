@@ -78,6 +78,8 @@ class DataRequest:
                 daily_data['formatted_ date']=d.strftime("%Y-%m-%d")
                 daily_data['formatted_address']=location['formatted_addesss']
                 daily_data['long_name']=location['long_name']
+                daily_data['latitude']=location['latitude']
+                daily_data['longitude']=location['longitude']
                 daily_data_lst.append(daily_data)
                 d += delta
         return daily_data_lst
@@ -85,7 +87,7 @@ class DataRequest:
 
 
     def store_in_csv(selfself,data_list):
-        header=['formatted_address','long_name','formatted_ date','time','summary','icon','sunriseTime','sunsetTime','moonPhase','precipIntensity','precipIntensityMax','precipIntensityMaxTime','precipProbability','precipType','precipAccumulation',
+        header=['formatted_address','long_name','latitude','longitude','formatted_ date','time','summary','icon','sunriseTime','sunsetTime','moonPhase','precipIntensity','precipIntensityMax','precipIntensityMaxTime','precipProbability','precipType','precipAccumulation',
                 'temperatureMin','temperatureMinTime','temperatureMax','temperatureMaxTime','apparentTemperatureMin','apparentTemperatureMinTime','apparentTemperatureMax','apparentTemperatureMaxTime',
                 'dewPoint','humidity','windSpeed','windBearing','visibility','cloudCover','pressure']
 
