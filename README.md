@@ -1,3 +1,4 @@
-Usage: Pass in the apikey as a command line argumnet when executing the main file.
+Usage: Pass in the forecast apikey as a command line argumnet when executing the main file.
 
-example: python main.py ApiKey
+
+example: python main.py forecast ApiKey
