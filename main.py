@@ -7,12 +7,12 @@ def main():
     # read locations csv data and get latitude and longitude data from google api
     locations_data=req.get_lat_long_data('locations.csv')
 
+    # get api key forecast.io from comand line argument
     api_key=sys.argv[1];
-    # get data from forecast.io
+    # get data from forecast.io for locations
     weather_data=req.store_weather_data(locations_data,api_key)
 
     # store in csv
-
     req.store_in_csv(weather_data)
 
 
